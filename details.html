@@ -205,7 +205,7 @@
                     <span class="detail__tab active-tab" data-target="#info">
                         Additional Info
                     </span>
-                    <span class="detail__tab" data-target="#reviews"></span>
+                    <span class="detail__tab" data-target="#reviews">Review</span>
                 </div>
 
                 <div class="details__tabs-content">
@@ -451,6 +451,27 @@
             }
 
             imgGallery();
+
+
+            const tabs = document.querySelectorAll('[data-target]'),
+            tabContents = document.querySelectorAll('[content]');
+
+        tabs.forEach((tab) =>{
+            tab.addEventListener('click', () =>{
+                const target = document.querySelector(tab.dataset.target);
+                tabContents.forEach((tabContent) => {
+                    tabContent.classList.remove('active-tab');
+                });
+
+                target.classList.add('active-tab');
+
+                tabs.forEach((tab) => {
+                    tab.classList.remove('active-tab');
+                });
+                tab.classList.add('active-tab');
+
+            });
+        });
         </script>
     </body>
 </html>
