@@ -55,9 +55,9 @@
                             <a href="accounts.html" class="nav__link">Account</a>
                         </li>
 
-                        <li class="nav__items">
+                        <!--<li class="nav__items">
                             <a href="compare.html" class="nav__link">Compare</a>
-                        </li>
+                        </li>-->
 
                         <li class="nav__items">
                             <a href="login.html" class="nav__link">Login</a>
@@ -119,6 +119,60 @@
                             <h3 class="checkout__title">Additional details Information</h3>
                             <textarea name="" placeholder="Order Note" cols="30" rows="10" class="form__input textarea"></textarea>
                         </form>
+                    </div>
+
+                    <div class="checkout__group">
+                        <h3 class="section__title">Cart Total</h3>
+
+                        <table class="order__table">
+                            <tr>
+                                <th colspan="2">Products</th>
+                                <th>Total</th>
+                            </tr>
+
+                            <tr>
+                                <td><img src="New folder/Product/Product-1-2.jpg" alt="" class="order__img"></td>
+                                <td><h3 class="table__title">Printed Causal Shirt</h3>
+                                <p class="total__quantity">x 1</p></td>
+                                <td><span class="table__price">₹499.00</span></td>
+                            </tr>
+
+                        <tr>
+                            <td><span class="order__subtitle">SubTotal</span></td>
+                            <td colspan="2"><span class="table__price">₹499.00</span></td>
+                        </tr>
+
+                        <tr>
+                            <td><span class="order__subtitle">Shipping</span></td>
+                            <td colspan="2"><span class="table__price">₹60.00</span></td>
+                        </tr>
+
+                        <tr>
+                            <td><span class="order__subtitle">Total</span></td>
+                            <td colspan="2"><span class="order__grand-total">₹569.00</span></td>
+                        </tr>
+                        </table>
+
+                        <div class="payment__methods">
+                            <h3 class="checkout__title payment__title">Payment</h3>
+
+                            <div class="payment__option flex">
+                                <input type="radio" checked name="radio" class="payment__input">
+                                <label for="" class="payment__label">Gpay</label>
+                            </div>
+
+                            <div class="payment__option flex">
+                                <input type="radio" name="radio" class="payment__input">
+                                <label for="" class="payment__label">NetBanking</label>
+                            </div>
+
+                            <div class="payment__option flex">
+                                <input type="radio"  name="radio" class="payment__input">
+                                <label for="" class="payment__label">COD</label>
+                            </div>
+                        </div>
+
+                        <button class="btn btn--md">Place Order</button>
                     </div>
                 </div>
             </section>
