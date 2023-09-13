@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <title>Logout Page</title>
+    <style>
+        /* Basic CSS for styling the page */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            align-items: center;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        /* Style the Logout button */
+        .logout-button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: hsl(0, 0% ,13%);
+            /* Red color */
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Logout</h1>
+        <p>Are you sure you want to log out?</p>
+
+        <!-- Logout Button -->
+        <form action="logout.php" method="post">
+            <input class="logout-button" type="submit" value="Logout">
+        </form>
+
+        <br>
+        <div class="nav__link">
+            Login it
+            <a href="login.html" class="nav__link">Login</a>
+        </div>
+    </div>
+</body>
+
+</html>

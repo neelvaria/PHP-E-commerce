@@ -347,8 +347,6 @@ input{
 .swiper-button-next,
 .swiper-button-prev{
     top: -1.875rem;
-    background-color: var(--first-color-alt);
-    border: 1px solid var(--border-color);
     width: 30px;
     height: 30px;
     border-radius: 30%;
@@ -1401,3 +1399,6 @@ table{
     font-size: var(--small-font-size);
 }
 
+.placed__order-table tr td .table{
+    text-align: center;
+}
