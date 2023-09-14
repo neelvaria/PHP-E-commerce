@@ -107,7 +107,7 @@
                         <a href="shop.html" class="category__items swiper-slide">
                             <img src="New folder/Category/Category-4.png" alt="" class="category__img">
 
-                            <h3 class="category__title">Shoes</h3>
+                            <h3 class="category__title">Footwear</h3>
                         </a>
 
                         <!--Category 5-->
@@ -137,9 +137,7 @@
             <!--Products Section-->
             <section class="products section container">
                 <div class="tab__btns">
-                    <span class="tab__btn active-tab" data-target="#featured">Featured</span>
-                    <span class="tab__btn" data-target="#popular">Popular</span>
-                    <span class="tab__btn" data-target="#new-added">New added</span>
+                    <span class="tab__btn active-tab">Featured</span>
                 </div>
 
                 <div class="tab__items">
@@ -1836,27 +1834,6 @@
             },
         }
     });
-
-    //Product JS
-        const tabs = document.querySelectorAll('[data-target]'),
-            tabContents = document.querySelectorAll('[content]');
-
-        tabs.forEach((tab) =>{
-            tab.addEventListener('click', () =>{
-                const target = document.querySelector(tab.dataset.target);
-                tabContents.forEach((tabContent) => {
-                    tabContent.classList.remove('active-tab');
-                });
-
-                target.classList.add('active-tab');
-
-                tabs.forEach((tab) => {
-                    tab.classList.remove('active-tab');
-                });
-                tab.classList.add('active-tab');
-
-            });
-        });
 
         var swiperProducts = new Swiper(".new__container", {
             spaceBetween: 24,
