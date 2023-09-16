@@ -1,8 +1,3 @@
-<?php
-
-include 'validate.php';
-?>
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -32,7 +27,7 @@ include 'validate.php';
                         Tiny Toes, Big Adventures
                     </p>
 
-                    <a href="logout.html" class="header__top-action">
+                    <a href="logout.php" class="header__top-action">
                        Logout
                     </a>
                 </div>
@@ -47,19 +42,19 @@ include 'validate.php';
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list">
                         <li class="nav__items">
-                            <a href="index.html" class="nav__link active-link">Home</a>
+                            <a href="index.php" class="nav__link active-link">Home</a>
                         </li>
 
                         <li class="nav__items">
-                            <a href="shop.html" class="nav__link">Shop</a>
+                            <a href="shop.php" class="nav__link">Shop</a>
                         </li>
 
                         <li class="nav__items">
-                            <a href="login-register.html" class="nav__link">Login</a>
+                            <a href="login.php" class="nav__link">Login</a>
                         </li>
 
                         <li class="nav__items">
-                            <a href="login.html" class="nav__link">Register</a>
+                            <a href="register.php" class="nav__link">Register</a>
                         </li>
                     </ul>
                 </div>
@@ -1808,8 +1803,7 @@ include 'validate.php';
                     <p class="copyright">@copy 2023 CozyCom. All Rights Reserved</p>
                     <span class="designer">Desgined by CozyCom Team</span>
                 </div>
-            </footer>
-            
+            </footer>            
         <!--Swiper JS-->
         <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
