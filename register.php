@@ -6,6 +6,7 @@
   $nameerror = $emailerr = $password ="";
   $name = $email = $password = "";
 
+  #Name Validation
   if(isset($_POST['submit'])) {
     if(empty($_POST['name'])){
       $nameerror = "Name is required";
@@ -17,6 +18,21 @@
         $nameerror = "Name only contains characters";
       }
     }
+    
+    #Email Validation
+    if(empty($_POST['email'])) {
+      $emailerr = "Email id required";
+    }
+    else{
+      $email = $_POST['email'];
+      $email = trim($email);
+      $email = htmlspecialchars($email);
+      if(!preg_match("/([w-]+@[w-]+.[w-]+)/",$email)){
+        $emailerr = "Enter a Proper Email";
+      }
+    }
+
+    #Password Validation
     
 
   }  
@@ -36,7 +52,7 @@
       <input type="text" class="input" placeholder="Name" name="name">
       <span class="error"><?php echo $nameerror; ?></span>
 
-      <input type="email" class="input" placeholder="Email" name="email">
+      <input type="text" class="input" placeholder="Email" name="email">
       <span class="error"><?php echo $emailerr; ?></span>
 
       <input type="password" class="input" placeholder="Password" name="pwd">
