@@ -1,0 +1,52 @@
+#Password Validation
+    if(empty($_POST['Password'])){
+      $pwderr = "Enter a Password";
+    }
+    else{
+      $password = $_POST['Password'];
+      $password = trim($password);
+      $password = htmlspecialchars($password);
+      if(!preg_match("/^(?=.*/d)(?=.*[A-Z])(?=.*[a-z]){8,}$/",$password)){
+        $pwderr = "Enter a password";
+      }
+    }
+
+    if(empty($_POST['confpwd'])){
+      $confpwderr = "Enter a ConfirmPassword";
+    }
+    else{
+      $conpwd = $_POST['confpwd'];
+      $conpwd = trim($conpwd);
+      $conpwd = htmlspecialchars($conpwd);
+      if(!preg_match("/((?=.*/d)(?=.*[A-Z])(?=.*[a-z]){8,})/",$conpwd)){
+        $confpwderr = "Enter a password";
+      }
+    }
+
+    #password & confirm password validation
+    if($password !== $conpwd){
+      $confpwderr = "Password and ConfirmPassword is not Same";
+    }
+    else{
+      $confpwderr = "Password Match";
+    }
+
+ if(!empty($_POST['pwd']) && ($_POST['pwd'] == $_POST['confpwd'])){
+      $password = $_POST['pwd'];
+      $password = trim($password);
+      $password = htmlspecialchars($password);
+      
+      $conpwd = $_POST['confpwd'];
+      $conpwd = trim($conpwd);
+      $conpwd = htmlspecialchars($conpwd);
+
+      if(!preg_match("/^(?=.*/d)(?=.*[A-Z])(?=.*[a-z]){8,}$/",$password,$conpwd)){
+        $pwderr = "Password must Contain 1 small & UpperCase";
+      }
+      else{
+        $pwderr = "Password Confirmed!!";
+      }
+    }
+    else{
+      $pwderr = "Enter a Password";
+    }

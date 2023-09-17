@@ -3,9 +3,9 @@
   session_start();
   $con=mysqli_connect("localhost","root","varia@123");
 
-  $nameerror = $emailerr = $password ="";
-  $name = $email = $password = "";
-
+  $nameerror = $emailerr = $pwderr = $conpwderr = "";
+  $name = $email = $password = $conpwd ="";
+  $success = false;
   #Name Validation
   if(isset($_POST['submit'])) {
     if(empty($_POST['name'])){
@@ -27,14 +27,30 @@
       $email = $_POST['email'];
       $email = trim($email);
       $email = htmlspecialchars($email);
-      if(!preg_match("/([w-]+@[w-]+.[w-]+)/",$email)){
+      if(!preg_match("/([\w-]+@[\w-]+.[\w-]+)/",$email)){
         $emailerr = "Enter a Proper Email";
       }
     }
 
-    #Password Validation
-    
+    #Password and ConfirmPassword
+    if(!empty($_POST['pwd']) && ($_POST['pwd'] == $_POST['confpwd']))
+    {
+      $password = ($_POST['pwd']);
+      $conpwd = ($_POST['confpwd']);
 
+      if(!preg_match("/^(?=.*\d)(?=.*[A-Z])(?=.*[a-z]).{8,}$/",$password)){
+        $pwderr = "Please Enter a Password 1";
+      }else {
+        $success = true; // Set success flag to true
+    }
+
+    }elseif(empty($_POST['pwd'])){
+      $conpwderr = "Please Check You've Entered Or Confirmed Your Password!"; 
+    } else{
+      $pwderr = "Please Enter a Correct Password";
+    } 
+    
+    
   }  
 ?>
 <!DOCTYPE html>
@@ -56,10 +72,10 @@
       <span class="error"><?php echo $emailerr; ?></span>
 
       <input type="password" class="input" placeholder="Password" name="pwd">
-      <span class="error"><?php echo $password; ?></span>
+      <span class="error"><?php echo $pwderr ?></span>
 
       <input type="password" class="input" placeholder="Confirm Password" name="confpwd">
-      <span class="error"><?php echo $password; ?></span>
+      <span class="error"><?php echo $conpwderr ?></span><br>
 
       <input type="submit" class="register-button" name="submit"><br><br>
 
