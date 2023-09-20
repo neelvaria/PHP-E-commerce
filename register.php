@@ -1,11 +1,12 @@
 <?php 
 
   session_start();
-  $con=mysqli_connect("localhost","root","varia@123");
+  include 'connect.php';
 
   $nameerror = $emailerr = $pwderr = $conpwderr = "";
   $name = $email = $password = $conpwd ="";
   $success = false;
+
   #Name Validation
   if(isset($_POST['submit'])) {
     if(empty($_POST['name'])){
@@ -50,6 +51,10 @@
       $pwderr = "Please Enter a Correct Password";
     } 
     
+    if ($success) {
+      header("Location: login.php");
+      exit(); 
+    }
     
   }  
 ?>
