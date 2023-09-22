@@ -1,7 +1,7 @@
 <?php 
 
   session_start();
-  include 'connect.php';
+
 
   $nameerror = $emailerr = $pwderr = $conpwderr = "";
   $name = $email = $password = $conpwd ="";
@@ -50,11 +50,20 @@
     } else{
       $pwderr = "Please Enter a Correct Password";
     } 
-    
     if ($success) {
-      header("Location: login.php");
-      exit(); 
-    }
+      $con = mysqli_connect("localhost", "root", "varia@123", "test");
+
+      $sql = "INSERT INTO register (name, email, pwd, confpwd) VALUES ('$name', '$email', '$password', '$conpwd')";
+      
+      if (mysqli_query($con, $sql)) {
+          header("Location: login.php");
+          exit();
+      } else {
+          echo "Error: " . mysqli_error($con);
+      }
+      
+      mysqli_close($con);
+  }
     
   }  
 ?>
