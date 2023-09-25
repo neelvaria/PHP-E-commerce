@@ -4,6 +4,7 @@ Developed by
 Varia Neel
 Drashti Suthar
 Meet shah
+Deeya Thakar
 
 Form GLS University, Ahmedabad
 

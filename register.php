@@ -1,7 +1,5 @@
 <?php 
-
   session_start();
-
 
   $nameerror = $emailerr = $pwderr = $conpwderr = "";
   $name = $email = $password = $conpwd ="";
@@ -64,8 +62,17 @@
       
       mysqli_close($con);
   }
-    
-  }  
+  }
+  if (isset($_SESSION['logged_out'])) {
+
+    unset($_SESSION['logged_out']);
+} 
+
+if (isset($_SESSION['auth']) && $_SESSION['auth'] === 'true') {
+  $registrationDisabled = true;
+} else {
+  $registrationDisabled = false;
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -77,6 +84,8 @@
 <body>
   <div class="register-container">
     <div class="header">Register</div>
+
+    <?php if (!$registrationDisabled): ?>
     <form action="" method="post">
 
       <input type="text" class="input" placeholder="Name" name="name">
@@ -95,6 +104,10 @@
 
       <span>Already a member <a href="login.php" class="">Login</a> <a href="index.php">Home</a></span>
     </form>
+    <?php else: ?>
+    <!-- Display a message if registration is disabled -->
+    <p>Registration is disabled because you are already logged in.</p>
+    <?php endif; ?>
   </div>
 </body>
 </html>

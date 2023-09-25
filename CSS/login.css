@@ -1,23 +1,25 @@
 body {
+    background-image: url("anthony-tran-6YMq73ydADI-unsplash.jpg");
+    background-size: 1600px;
     font-family: 'Lato', sans-serif;
-    /*background-image: radial-gradient(#696969 10%, #FFFFFF 100%, #696969 10%);*/
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: hsl(129, 36% ,85%);
+    /*background-color: hsl(129, 36% ,85%);*/
 }
   
 .login-container {
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: white;
     border-radius: 20px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
     padding: 30px;
     width: 300px;
     text-align: center;
     animation: slide-up 0.5s ease;
+    opacity: 0.7;
 }
   
 @keyframes slide-up {
