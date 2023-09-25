@@ -1,12 +1,13 @@
 body {
+  background-image: url("baby-girl-her-crib.jpg");
   font-family: 'Lato', sans-serif;
+  background-size: cover;
   margin: 0;
   padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: hsl(129, 36% ,85%);
 }
 
 .error{

@@ -78,8 +78,6 @@
                         <div class="product__item">
                                 <div class="product__banner">
                                     <a href="details.html" class="product__images">
-
-                                        <!--Product1-->
                                         <img src="New folder/Product/resize8.jpg" alt="" class="product__img default">
                                         <img src="New folder/Product/resize 8(1).jpg" alt="" class="product__img hover">
                                     </a>
@@ -128,8 +126,6 @@
                         <div class="product__item">
                                 <div class="product__banner">
                                     <a href="details.html" class="product__images">
-
-                                        <!--Product1-->
                                         <img src="New folder/Product/resize 1.jpg" alt="" class="product__img default">
                                         <img src="New folder/Product/resize 1(1).jpg" alt="" class="product__img hover">
                                     </a>
@@ -178,8 +174,6 @@
                         <div class="product__item">
                                 <div class="product__banner">
                                     <a href="details.html" class="product__images">
-
-                                        <!--Product1-->
                                         <img src="New folder/Product/resize3.jpg" alt="" class="product__img default">
                                         <img src="New folder/Product/resize 3(1).jpg" alt="" class="product__img hover">
                                     </a>
@@ -324,8 +318,6 @@
                         <div class="product__item">
                                 <div class="product__banner">
                                     <a href="details.html" class="product__images">
-
-                                        <!--Product1-->
                                         <img src="New folder/Product/Extra/resize2.jpg" alt="" class="product__img default">
                                         <img src="New folder/Product/Extra/resize2(1).jpg" alt="" class="product__img hover">
                                     </a>
@@ -374,8 +366,6 @@
                         <div class="product__item">
                                 <div class="product__banner">
                                     <a href="details.html" class="product__images">
-
-                                        <!--Product1-->
                                         <img src="New folder/Product/Extra/resize3.jpg" alt="" class="product__img default">
                                         <img src="New folder/Product/Extra/resize3(1).jpg" alt="" class="product__img hover">
                                     </a>
@@ -424,8 +414,6 @@
                         <div class="product__item">
                                 <div class="product__banner">
                                     <a href="details.html" class="product__images">
-
-                                        <!--Product1-->
                                         <img src="New folder/Product/resize6.jpg" class="product__img default">
                                         <img src="New folder/Product/resize 6(1).jpg" class="product__img hover">
                                     </a>
@@ -569,8 +557,6 @@
                         <div class="product__item">
                             <div class="product__banner">
                                 <a href="details.html" class="product__images">
-
-                                        <!--Product1-->
                                         <img src="New folder/Product/resize4.jpg" alt="" class="product__img default">
                                         <img src="New folder/Product/resize 4(1).jpg" alt="" class="product__img hover">
                                 </a>
@@ -619,8 +605,6 @@
                         <div class="product__item">
                             <div class="product__banner">
                                 <a href="details.html" class="product__images">
-
-                                        <!--Product1-->
                                         <img src="New folder/Product/Product-18-1.jpg" class="product__img default">
                                         <img src="New folder/Product/Product-18-2.jpg" class="product__img hover">
                                 </a>

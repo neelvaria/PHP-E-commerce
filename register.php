@@ -38,7 +38,7 @@
       $conpwd = ($_POST['confpwd']);
 
       if(!preg_match("/^(?=.*\d)(?=.*[A-Z])(?=.*[a-z]).{8,}$/",$password)){
-        $pwderr = "Please Enter a Password 1";
+        $pwderr = "Please Enter a Password Correctly";
       }else {
         $success = true; // Set success flag to true
     }
@@ -48,6 +48,7 @@
     } else{
       $pwderr = "Please Enter a Correct Password";
     } 
+
     if ($success) {
       $con = mysqli_connect("localhost", "root", "varia@123", "test");
 
@@ -74,10 +75,11 @@ if (isset($_SESSION['auth']) && $_SESSION['auth'] === 'true') {
   $registrationDisabled = false;
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="CSS/register.css"/>
+  <link rel="stylesheet" href="CSS/register.css" />
 <title>Register - CozyCom</title>
 </style>
 </head>
